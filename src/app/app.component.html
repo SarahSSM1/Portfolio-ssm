@@ -1,209 +1,183 @@
 <!-- inicio da Navbar -->
-<section>
-  <div>
-    <div class="row">
-      <div class="col-md-7 col-sm-12">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarTogglerDemo01"
-            aria-controls="navbarTogglerDemo01"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <ul class="navbar-nav ml-auto mt-2 mt-lg-0 navCustom">
-              <li class="nav-list active">
-                <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-list">
-                <a class="nav-link" href="#habilidades">Habilidades</a>
-              </li>
-              <li class="nav-list">
-                <a class="nav-link" href="#sobre">Sobre</a>
-              </li>
-              <li class="nav-list">
-                <a class="nav-link" href="#projetos">Projetos</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </div>
+<header class="header" data-header>
+  <div class="container">
+    <nav class="navbar" data-navbar [ngClass]="status ? 'active' : ''">
+      <ul class="navbar-list">
+        <li class="navbar-item">
+          <a href="#home"  class="label-lg navbar-link has-after" routerLinkActive="active">Home</a>
+        </li>
+        <li class="navbar-item">
+          <a href="#habilidades"  class="label-lg navbar-link has-after" routerLinkActive="active">Expertise</a>
+        </li>
+
+        <li class="navbar-item">
+          <a href="#sobre"  class="label-lg navbar-link has-after" routerLinkActive="active">Portfolio</a>
+        </li>
+
+        <li class="navbar-item">
+          <a href="#projetos"  class="label-lg navbar-link has-after" routerLinkActive="active">Projects</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="text-center">
+      <button class="nav-toggle-btn" aria-label="menu" data-nav-toggler (click)="addToggle()"></button>
     </div>
   </div>
-</section>
+</header>
 <!-- final da Navbar -->
-<!-- inicio sessão box imgs -->
-<div id="home" class="container-fluid">
-  <section class="mb-5">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-12 col-sm-12">
-          <img class="col-md-6 col-sm-6 mb-4" src="/assets/fotos/Capa.png" alt="capa"/>
 
-          <div class="botao col-md-6 col-sm-6 mb-4">
+<section id="home" class="section hero" aria-label="home">
+  <div id="main-banner">
+    <figure class="hero-banner">
+      <img src="/assets/fotos/banner.jpg"
+        alt="banner fofo" class="w-100">
+    </figure>
 
-            <button class="btn">botão</button>
-          </div>
-          <!-- <img class="col-md-6 col-sm-6 mb-4" src="/assets/fotos/bonequinha.png" alt="bonequinha"/> -->
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- final sessão box imgs -->
-  <!-- inicio da sessão habilidades -->
-  <section id="habilidades" class="container-fluid">
-    <div class="d-flex justify-content-center align-items-center">
-      <img class="col-md-5 mt-3 mb-5 ml-5" src="/assets/fotos/habilidades.png" alt=" foto habilidades"/>
-    </div>
+  </div>
+</section>
 
-    <div class="container mb-5">
-      <div class="row">
-        <div class="col-md-12">
-          <a>
-            <img class="icons col-md-2 mb-5" src="/assets/fotos/Angular.png" alt="Angular" />
-          </a>
-          <a>
-            <img class="icons col-md-2 mb-5" src="/assets/fotos/CSS3.png" alt="CSS3" />
-          </a>
-          <a>
-            <img class="icons col-md-2 mb-5" src="/assets/fotos/github.png" alt="Github" />
-          </a>
-          <a>
-            <img class="icons col-md-2 mb-5" src="/assets/fotos/HTML5.png" alt="HTML5" />
-          </a>
-          <a>
-            <img class="icons col-md-2 mb-5" src="/assets/fotos/JS.png" alt="JavaScript" />
-          </a>
-          <a>
-            <img class="icons col-md-2 mb-5" src="/assets/fotos/sass.png" alt="Sass" />
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- final da sessão habilidades -->
-  <!-- inicio da sessão sobre -->
-  <section id="sobre">
-    <div class="container-fluid">
-      <div class="row">
-        <img
-          class="col-md-12 col-sm-12"
-          src="/assets/fotos/mosaico.png"
-          alt="mosaico"
-        />
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="d-flex justify-content-center align-items-center">
-        <img
-          class="col-md-3 mt-3 mb-5 ml-5"
-          src="/assets/fotos/Sobre.png"
-          alt="sobre"
-        />
-      </div>
-      <p>
-        Em 2020, após passar em um concurso para atuar como jovem aprendiz da
-        Petrobras, eu e um grupo de colegas, idealizamos um aplicativo para
-        ajudar no cotidiano da empresa, com o objetivo de expandir para outras
-        coorporações. Com isso acabei me interessando pela area, e dei
-        continuidade ao prototipo, fazendo com que nos transformássemos em uma
-        pequena startup. Oriunda a essa experiencia me aprofundei mais na
-        codificação e desenvolvimento web.
-      </p>
-
-      <p>
-        Posteriormente, tive o privilégio de desenvolver para uma agência de
-        publicidade, liderada por uma grande corporação, onde tive a
-        oportunidade de atuar em projetos nacionais e internacionais, e em
-        pequenas startups. Durante esse período, desenvolvi minhas competências
-        em Javascript, HTML, CSS, SASS e outras atividades como APIs e banco de
-        dados e o framework Angular (8, 9 e 12).
-      </p>
-
-      <p>
-        Atualmente estou focando nas tecnologias voltadas ao FrontEnd, mas tenho
-        o objetico de me tornar fullstack. Meu foco principal é construir
-        aplicações de qualidade e trazer a melhor experiencia visual possivel
-        nos projetos destinados a futuros clientes. No meu tempo livre, crio
-        alguns projetos com coisas que gostava na infancia.
-      </p>
-    </div>
-  </section>
-</div>
-<!-- final da sessão sobre -->
-<!-- inicio da sessão projetos -->
-
-<section id="projetos" class="container-fluid">
+ <!-- inicio da sessão habilidades -->
+ <section id="habilidades" class="container-fluid">
   <div class="d-flex justify-content-center align-items-center">
-    <img class="col-md-4 mt-5 mb-3 ml-5" src="/assets/fotos/projetos.png" alt=" foto habilidades"/>
+    <img class="col-md-5 mt-3 mb-5 ml-5" src="/assets/fotos/habilidades.png" alt=" foto habilidades"/>
   </div>
 
   <div class="container mb-5">
     <div class="row">
-      <div class="item col-md-12 mt-4">
+      <div class="col-md-12">
         <a>
-          <img class="item col-md-4 mb-5" src="/assets/fotos/FFP.png" alt="fnaf" />
-        </a>
-        <a>
-          <img class="item col-md-4 mb-5" src="/assets/fotos/Pokedéx.png" alt="pokemon" />
+          <img class="icons col-md-2 mb-5" src="/assets/fotos/Angular.png" alt="Angular" />
         </a>
         <a>
-          <img class="item col-md-4 mb-5" src="/assets/fotos/portfolio.png" alt="portfolio" />
+          <img class="icons col-md-2 mb-5" src="/assets/fotos/CSS3.png" alt="CSS3" />
         </a>
-
-        <a class="botaum btn btn-outline-light btn-floating m-1" href="https://github.com/SarahSSM1?tab=repositories" role="button">
-          Veja Mais
+        <a>
+          <img class="icons col-md-2 mb-5" src="/assets/fotos/github.png" alt="Github" />
         </a>
-
+        <a>
+          <img class="icons col-md-2 mb-5" src="/assets/fotos/HTML5.png" alt="HTML5" />
+        </a>
+        <a>
+          <img class="icons col-md-2 mb-5" src="/assets/fotos/JS.png" alt="JavaScript" />
+        </a>
+        <a>
+          <img class="icons col-md-2 mb-5" src="/assets/fotos/sass.png" alt="Sass" />
+        </a>
       </div>
     </div>
   </div>
 </section>
+<!-- final da sessão habilidades -->
+
+<!-- inicio da sessão sobre -->
+<section id="sobre">
+  <div class="container-fluid">
+    <div class="row">
+      <img
+        class="col-md-12 col-sm-12"
+        src="/assets/fotos/mosaico.png"
+        alt="mosaico"
+      />
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="d-flex justify-content-center align-items-center">
+      <img
+        class="col-md-3 mt-3 mb-5 ml-5"
+        src="/assets/fotos/Sobre.png"
+        alt="sobre"
+      />
+    </div>
+    <p>
+      Em 2020, após passar em um concurso para atuar como jovem aprendiz da
+      Petrobras, eu e um grupo de colegas, idealizamos um aplicativo para
+      ajudar no cotidiano da empresa, com o objetivo de expandir para outras
+      coorporações. Com isso acabei me interessando pela area, e dei
+      continuidade ao prototipo, fazendo com que nos transformássemos em uma
+      pequena startup. Oriunda a essa experiencia me aprofundei mais na
+      codificação e desenvolvimento web.
+    </p>
+
+    <p>
+      Posteriormente, tive o privilégio de desenvolver para uma agência de
+      publicidade, liderada por uma grande corporação, onde tive a
+      oportunidade de atuar em projetos nacionais e internacionais, e em
+      pequenas startups. Durante esse período, desenvolvi minhas competências
+      em Javascript, HTML, CSS, SASS e outras atividades como APIs e banco de
+      dados e o framework Angular (8, 9 e 12).
+    </p>
+
+    <p>
+      Atualmente estou focando nas tecnologias voltadas ao FrontEnd, mas tenho
+      o objetico de me tornar fullstack. Meu foco principal é construir
+      aplicações de qualidade e trazer a melhor experiencia visual possivel
+      nos projetos destinados a futuros clientes. No meu tempo livre, crio
+      alguns projetos com coisas que gostava na infancia.
+    </p>
+  </div>
+</section>
+<!-- final da sessão sobre -->
+
+<!-- inicio da sessão projetos -->
+<section id="projetos" class="container-fluid">
+<div class="d-flex justify-content-center align-items-center">
+    <img class="col-md-4 mt-5 mb-3 ml-5" src="/assets/fotos/projetos.png" alt=" foto habilidades"/>
+</div>
+
+<div class="container mb-5">
+  <div class="row">
+    <div class="item col-md-12 mt-4">
+      <a href="https://github.com/SarahSSM1/Pizzaria_FNAF">
+        <img class="item col-md-4 mb-5" src="/assets/fotos/FFP.png" alt="fnaf" />
+      </a>
+      <a href="https://github.com/SarahSSM1/Pokedex">
+        <img class="item col-md-4 mb-5" src="/assets/fotos/Pokedéx.png" alt="pokemon" />
+      </a>
+      <a href="https://github.com/SarahSSM1/Portfolio">
+        <img class="item col-md-4 mb-5"  src="/assets/fotos/portfolio.png" alt="portfolio" />
+      </a>
+
+      <div class="text-center">
+        <a class="btn btn-warning" href="https://github.com/SarahSSM1?tab=repositories">Veja Mais</a>
+     </div>
+
+      <!-- <div class="text-center">
+        <button class="botaum btn btn-outline-light btn-floating m-1" type="button" href="https://github.com/SarahSSM1?tab=repositories" role="button">
+          Veja Mais
+        </button>
+     </div> -->
+    </div>
+  </div>
+</div>
+</section>
 <!-- final da sessão projetos -->
 
 <!-- inicio do footer -->
-<section>
-  <footer class="bg-dark text-center text-white">
-    <!-- Grid container -->
-    <div class="container p-4 pb-0">
-      <!-- Section: Social media -->
-      <section class="mb-4">
-        <!-- Linkedin -->
-        <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/in/sarah-santana-de-morais-1a2aaa277/" role="button">
-          <i class="fab fa-linkedin-in"></i>
-        </a>
+<footer class="footer">
+<div class="container">
+  <ul class="social-list">
+    <li>
+      <a href="https://www.linkedin.com/in/sarah-santana-de-morais-1a2aaa277/" class="social-link">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </li>
 
-        <!-- Gmail -->
-        <a class="btn btn-outline-light btn-floating m-1" href="mailto:sarah.santana.morais1@gmail.com" role="button">
-          <i class="fa-regular fa-envelope"></i>
-        </a>
+    <li>
+      <a href="https://github.com/SarahSSM1?tab=repositories" class="social-link">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
 
-        <!-- whatsapp -->
-        <a class="btn btn-outline-light btn-floating m-1" href="https://wa.me/5581983553242" role="button">
-          <i class="fab fa-whatsapp"></i>
-        </a>
-
-        <!-- Github -->
-        <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/SarahSSM1?tab=repositories" role="button">
-          <i class="fab fa-github"></i>
-        </a>
-      </section>
-      <!-- Section: Social media -->
-    </div>
-    <!-- Grid container -->
-
-    <!-- Copyright -->
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-      © 2020 Copyright:
-      <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
-    </div>
-    <!-- Copyright -->
-  </footer>
-</section>
+    <li>
+      <a href="mailto:sarah.santana.morais1@gmail.com" class="social-link">
+        <i class="fa-regular fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+  <p class="text-center">&copy; 2023 copyright all right reserved</p>
+</div>
+</footer>
 <!-- final do footer -->
+

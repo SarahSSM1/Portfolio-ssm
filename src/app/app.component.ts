@@ -7,8 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  constructor( ){}
+  status = false;
 
-  ngOnInit(){ }
+  addToggle(){
+    this.status = !this.status
+  }
 
-}
+
+ }
