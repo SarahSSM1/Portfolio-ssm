@@ -7,11 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  status = false;
-
-  addToggle(){
-    this.status = !this.status
-  }
-
-
  }
