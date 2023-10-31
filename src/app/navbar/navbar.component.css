@@ -1,3 +1,67 @@
-.navbar{
-  
+.tudo{
+  background-color: #ffffff;
+}
+
+/* NAVIGATION */
+nav {
+  position: fixed;
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px 0;
+  box-shadow: #f10cb8;
+}
+
+nav ul {
+  list-style: none;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;    /*isso tira a barra de baixo */
+  color: #585559;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0 10px;
+}
+
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all .5s;
+}
+
+nav ul li a:hover {
+   color: #FF621A  ;        /*cor dos nomes */
+}
+
+
+/* stroke */
+nav.stroke ul li a,
+nav.fill ul li a {
+  position: relative;
+}
+
+nav.stroke ul li a:after,
+nav.fill ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #f10cb8;
+  height: 3px;
+}
+
+nav.stroke ul li a:hover:after {
+  width: 100%;
 }

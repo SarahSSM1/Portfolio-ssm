@@ -1,13 +1,18 @@
 /*-----------------------------------*\
-  #banner
+  #img
 \*-----------------------------------*/
 
-/* #main-banner{
+#main-banner{
   background-size: cover;
-  background-position: 0 55%;
+  background-position: 0 100%;
   position: relative;
-  margin-top: -40px;
-} */
+}
+
+.bru{
+  background-size: 100% auto no repeat;
+  padding: 0;
+}
+
 
 /*-----------------------------------*\
   #expertise
@@ -15,7 +20,7 @@
 
 .top{
   padding: 50px;
-  background-color: rgb(209, 232, 253);
+  background-color:#eddcf5;
  }
 
  .header{
@@ -27,14 +32,9 @@
 }
 
 .barra{
-  /* content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(50%); */
   height: 4px;
   width: 100px;
-  background-color: rgb(0, 0, 0);
+  background-color: #961AB8 ;
 }
 
  .box{
@@ -68,14 +68,14 @@
    height: 90px;
    position: relative;
    border-radius: 45px;
-   background-color: #fefafaed;
+   background-color: #f2e8f8;
    display: flex;
    justify-content: center;
    align-items: center;
  }
 
  .skill-title h3{
-  color: #241a38;
+  color: #93356E;
   margin: 0.5rem;
  }
 
@@ -102,30 +102,6 @@
   height: 100vh;
   background-color: #00ffff;
 }
-
-/* .botaum{
-  position: relative;
-  align-items: center;
-  width: 200px;
-  height: 50px;
-  font-weight: bold;
-  font-size: 30px;
-  border: none;
-  border-radius: 200px;
-  color:black;
-  transition:all 0.6s ease-in-out 0s;
-  box-shadow: inset 0 0 20px;
-} */
-
-/* .botaum:hover{
-  background: transparent;
-  color: aqua;
-  transform: scale(1.5);
-  box-shadow: 0 0 60px #0f9696;
-  cursor: grab;
-  border: 2px solid;
-
-} */
 
 .item{
   transition: .25s;
