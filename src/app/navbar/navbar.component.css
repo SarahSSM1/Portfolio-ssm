@@ -1,67 +1,37 @@
-.tudo{
-  background-color: #ffffff;
-}
-
-/* NAVIGATION */
-nav {
+.header{
   position: fixed;
-  position: relative;
-  width: 80%;
-  margin: 0 auto;
-  padding: 10px 0;
-  box-shadow: #f10cb8;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 10%;
+  background: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  justify-content: center;
 }
 
-nav ul {
-  list-style: none;
-  text-align: center;
-}
-
-nav ul li {
-  display: inline-block;
-}
-
-nav ul li a {
-  display: block;
-  padding: 15px;
-  text-decoration: none;    /*isso tira a barra de baixo */
-  color: #585559;
-  font-weight: 800;
-  text-transform: uppercase;
-  margin: 0 10px;
+.navbar a{
+  font-size: 1.6rem;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 2.5rem;
 }
 
 nav ul li a,
 nav ul li a:after,
 nav ul li a:before {
   transition: all .5s;
+  color: rgb(87, 82, 84);
 }
 
 nav ul li a:hover {
-   color: #FF621A  ;        /*cor dos nomes */
+   color: #FF621A;
 }
 
-
-/* stroke */
-nav.stroke ul li a,
-nav.fill ul li a {
-  position: relative;
-}
-
-nav.stroke ul li a:after,
-nav.fill ul li a:after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  width: 0%;
-  content: '.';
-  color: transparent;
-  background: #f10cb8;
-  height: 3px;
-}
-
-nav.stroke ul li a:hover:after {
-  width: 100%;
+@media (max-width: 992px){
+  .header{
+    justify-content: left ;
+  }
 }
