@@ -23,7 +23,7 @@ nav ul li a,
 nav ul li a:after,
 nav ul li a:before {
   transition: all .5s;
-  color: rgb(87, 82, 84);
+  color: rgb(99, 0, 164);
 }
 
 nav ul li a:hover {
